@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		580434DB2AF7A8CC0034ACB8 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434DA2AF7A8CC0034ACB8 /* CityModel.swift */; };
+		580434DD2AF7AA8A0034ACB8 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434DC2AF7AA8A0034ACB8 /* LoginResponseModel.swift */; };
+		580434DF2AF8326C0034ACB8 /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434DE2AF8326C0034ACB8 /* CircleProgress.swift */; };
+		580434E12AF839640034ACB8 /* LoginOtpResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434E02AF839640034ACB8 /* LoginOtpResponseModel.swift */; };
+		580434E32AF8431F0034ACB8 /* LoginOtpResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434E22AF8431F0034ACB8 /* LoginOtpResponseViewModel.swift */; };
+		580434E52AF845C70034ACB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434E42AF845C70034ACB8 /* HomeView.swift */; };
+		580434E72AF84A050034ACB8 /* GameListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434E62AF84A050034ACB8 /* GameListModel.swift */; };
+		580434E92AF84B8F0034ACB8 /* GameCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434E82AF84B8F0034ACB8 /* GameCarouselViewModel.swift */; };
+		580434EC2AF84E540034ACB8 /* GameCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580434EB2AF84E540034ACB8 /* GameCarousel.swift */; };
+		582299472B04F8E2006AFBAC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299462B04F8E2006AFBAC /* GameView.swift */; };
+		582299492B04F97B006AFBAC /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299482B04F97B006AFBAC /* Header.swift */; };
+		5822994B2B04FA0B006AFBAC /* NumberBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822994A2B04FA0B006AFBAC /* NumberBall.swift */; };
+		5822994D2B05075A006AFBAC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822994C2B05075A006AFBAC /* ProfileView.swift */; };
+		5822994F2B06A86C006AFBAC /* DrawCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822994E2B06A86C006AFBAC /* DrawCarousel.swift */; };
+		582299512B06A997006AFBAC /* RecentDrawsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299502B06A997006AFBAC /* RecentDrawsModel.swift */; };
+		582299532B077882006AFBAC /* DrawsCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299522B077882006AFBAC /* DrawsCarouselViewModel.swift */; };
+		58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181D82B1674A900BEF046 /* BalanceModel.swift */; };
+		58C181DB2B167AAE00BEF046 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181DA2B167AAE00BEF046 /* BalanceViewModel.swift */; };
+		58C181DD2B1715B400BEF046 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181DC2B1715B400BEF046 /* MainView.swift */; };
+		58C181DF2B1768F700BEF046 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181DE2B1768F700BEF046 /* ResultView.swift */; };
+		58D15F422A8B5EFC0065AACA /* LootoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F412A8B5EFC0065AACA /* LootoApp.swift */; };
+		58D15F442A8B5EFC0065AACA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F432A8B5EFC0065AACA /* ContentView.swift */; };
+		58D15F462A8B5EFD0065AACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D15F452A8B5EFD0065AACA /* Assets.xcassets */; };
+		58D15F492A8B5EFD0065AACA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D15F482A8B5EFD0065AACA /* Preview Assets.xcassets */; };
+		58D15F522A8B67130065AACA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F512A8B67130065AACA /* LoginView.swift */; };
+		58D15F542A8B6BED0065AACA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F532A8B6BED0065AACA /* RegisterView.swift */; };
+		58D15F572A8B84F60065AACA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F562A8B84F60065AACA /* SplashView.swift */; };
+		58D15F5A2A8B8DB70065AACA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F592A8B8DB70065AACA /* ApiService.swift */; };
+		58D15F5D2A8B949B0065AACA /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F5C2A8B949B0065AACA /* CityViewModel.swift */; };
+		58D15F5F2A8BE6920065AACA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F5E2A8BE6920065AACA /* CustomTextField.swift */; };
+		58D15F612A8BEEBB0065AACA /* CustomCityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F602A8BEEBB0065AACA /* CustomCityPicker.swift */; };
+		58D15F632A8CA3CF0065AACA /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F622A8CA3CF0065AACA /* CustomDatePicker.swift */; };
+		58D15F672A8D08560065AACA /* OtpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D15F662A8D08560065AACA /* OtpView.swift */; };
+		58E5C9782AC9A18E003D92E6 /* LoginResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5C9772AC9A18E003D92E6 /* LoginResponseViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		580434DA2AF7A8CC0034ACB8 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		580434DC2AF7AA8A0034ACB8 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		580434DE2AF8326C0034ACB8 /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		580434E02AF839640034ACB8 /* LoginOtpResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOtpResponseModel.swift; sourceTree = "<group>"; };
+		580434E22AF8431F0034ACB8 /* LoginOtpResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOtpResponseViewModel.swift; sourceTree = "<group>"; };
+		580434E42AF845C70034ACB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		580434E62AF84A050034ACB8 /* GameListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListModel.swift; sourceTree = "<group>"; };
+		580434E82AF84B8F0034ACB8 /* GameCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCarouselViewModel.swift; sourceTree = "<group>"; };
+		580434EB2AF84E540034ACB8 /* GameCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCarousel.swift; sourceTree = "<group>"; };
+		582299462B04F8E2006AFBAC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		582299482B04F97B006AFBAC /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		5822994A2B04FA0B006AFBAC /* NumberBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBall.swift; sourceTree = "<group>"; };
+		5822994C2B05075A006AFBAC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5822994E2B06A86C006AFBAC /* DrawCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCarousel.swift; sourceTree = "<group>"; };
+		582299502B06A997006AFBAC /* RecentDrawsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDrawsModel.swift; sourceTree = "<group>"; };
+		582299522B077882006AFBAC /* DrawsCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsCarouselViewModel.swift; sourceTree = "<group>"; };
+		58C181D82B1674A900BEF046 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
+		58C181DA2B167AAE00BEF046 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		58C181DC2B1715B400BEF046 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		58C181DE2B1768F700BEF046 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		58D15F3E2A8B5EFC0065AACA /* Looto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Looto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58D15F412A8B5EFC0065AACA /* LootoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootoApp.swift; sourceTree = "<group>"; };
+		58D15F432A8B5EFC0065AACA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		58D15F452A8B5EFD0065AACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58D15F482A8B5EFD0065AACA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58D15F512A8B67130065AACA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		58D15F532A8B6BED0065AACA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		58D15F562A8B84F60065AACA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		58D15F592A8B8DB70065AACA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		58D15F5C2A8B949B0065AACA /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		58D15F5E2A8BE6920065AACA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		58D15F602A8BEEBB0065AACA /* CustomCityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCityPicker.swift; sourceTree = "<group>"; };
+		58D15F622A8CA3CF0065AACA /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		58D15F662A8D08560065AACA /* OtpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpView.swift; sourceTree = "<group>"; };
+		58E5C9772AC9A18E003D92E6 /* LoginResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58D15F3B2A8B5EFC0065AACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58D15F352A8B5EFB0065AACA = {
+			isa = PBXGroup;
+			children = (
+				58D15F402A8B5EFC0065AACA /* Looto */,
+				58D15F3F2A8B5EFC0065AACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58D15F3F2A8B5EFC0065AACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F3E2A8B5EFC0065AACA /* Looto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58D15F402A8B5EFC0065AACA /* Looto */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F5B2A8B947D0065AACA /* ViewModels */,
+				58D15F582A8B8D4B0065AACA /* Network */,
+				58D15F552A8B6D4A0065AACA /* Components */,
+				58D15F502A8B62FD0065AACA /* Models */,
+				58D15F4F2A8B62F00065AACA /* Views */,
+				58D15F412A8B5EFC0065AACA /* LootoApp.swift */,
+				58D15F432A8B5EFC0065AACA /* ContentView.swift */,
+				58D15F452A8B5EFD0065AACA /* Assets.xcassets */,
+				58D15F472A8B5EFD0065AACA /* Preview Content */,
+			);
+			path = Looto;
+			sourceTree = "<group>";
+		};
+		58D15F472A8B5EFD0065AACA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F482A8B5EFD0065AACA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58D15F4F2A8B62F00065AACA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F512A8B67130065AACA /* LoginView.swift */,
+				58D15F532A8B6BED0065AACA /* RegisterView.swift */,
+				58D15F562A8B84F60065AACA /* SplashView.swift */,
+				58D15F662A8D08560065AACA /* OtpView.swift */,
+				580434E42AF845C70034ACB8 /* HomeView.swift */,
+				582299462B04F8E2006AFBAC /* GameView.swift */,
+				5822994C2B05075A006AFBAC /* ProfileView.swift */,
+				58C181DC2B1715B400BEF046 /* MainView.swift */,
+				58C181DE2B1768F700BEF046 /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58D15F502A8B62FD0065AACA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				580434DA2AF7A8CC0034ACB8 /* CityModel.swift */,
+				580434DC2AF7AA8A0034ACB8 /* LoginResponseModel.swift */,
+				580434E02AF839640034ACB8 /* LoginOtpResponseModel.swift */,
+				580434E62AF84A050034ACB8 /* GameListModel.swift */,
+				582299502B06A997006AFBAC /* RecentDrawsModel.swift */,
+				58C181D82B1674A900BEF046 /* BalanceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58D15F552A8B6D4A0065AACA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F5E2A8BE6920065AACA /* CustomTextField.swift */,
+				58D15F602A8BEEBB0065AACA /* CustomCityPicker.swift */,
+				58D15F622A8CA3CF0065AACA /* CustomDatePicker.swift */,
+				580434DE2AF8326C0034ACB8 /* CircleProgress.swift */,
+				580434EB2AF84E540034ACB8 /* GameCarousel.swift */,
+				582299482B04F97B006AFBAC /* Header.swift */,
+				5822994A2B04FA0B006AFBAC /* NumberBall.swift */,
+				5822994E2B06A86C006AFBAC /* DrawCarousel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		58D15F582A8B8D4B0065AACA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F592A8B8DB70065AACA /* ApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		58D15F5B2A8B947D0065AACA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				58D15F5C2A8B949B0065AACA /* CityViewModel.swift */,
+				58E5C9772AC9A18E003D92E6 /* LoginResponseViewModel.swift */,
+				580434E22AF8431F0034ACB8 /* LoginOtpResponseViewModel.swift */,
+				580434E82AF84B8F0034ACB8 /* GameCarouselViewModel.swift */,
+				582299522B077882006AFBAC /* DrawsCarouselViewModel.swift */,
+				58C181DA2B167AAE00BEF046 /* BalanceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58D15F3D2A8B5EFC0065AACA /* Looto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58D15F4C2A8B5EFD0065AACA /* Build configuration list for PBXNativeTarget "Looto" */;
+			buildPhases = (
+				58D15F3A2A8B5EFC0065AACA /* Sources */,
+				58D15F3B2A8B5EFC0065AACA /* Frameworks */,
+				58D15F3C2A8B5EFC0065AACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Looto;
+			productName = Looto;
+			productReference = 58D15F3E2A8B5EFC0065AACA /* Looto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58D15F362A8B5EFB0065AACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					58D15F3D2A8B5EFC0065AACA = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 58D15F392A8B5EFB0065AACA /* Build configuration list for PBXProject "Looto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58D15F352A8B5EFB0065AACA;
+			productRefGroup = 58D15F3F2A8B5EFC0065AACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58D15F3D2A8B5EFC0065AACA /* Looto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58D15F3C2A8B5EFC0065AACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D15F492A8B5EFD0065AACA /* Preview Assets.xcassets in Resources */,
+				58D15F462A8B5EFD0065AACA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58D15F3A2A8B5EFC0065AACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D15F632A8CA3CF0065AACA /* CustomDatePicker.swift in Sources */,
+				580434E32AF8431F0034ACB8 /* LoginOtpResponseViewModel.swift in Sources */,
+				58D15F522A8B67130065AACA /* LoginView.swift in Sources */,
+				580434E12AF839640034ACB8 /* LoginOtpResponseModel.swift in Sources */,
+				58D15F542A8B6BED0065AACA /* RegisterView.swift in Sources */,
+				58C181DF2B1768F700BEF046 /* ResultView.swift in Sources */,
+				58D15F612A8BEEBB0065AACA /* CustomCityPicker.swift in Sources */,
+				582299532B077882006AFBAC /* DrawsCarouselViewModel.swift in Sources */,
+				580434DB2AF7A8CC0034ACB8 /* CityModel.swift in Sources */,
+				5822994D2B05075A006AFBAC /* ProfileView.swift in Sources */,
+				5822994B2B04FA0B006AFBAC /* NumberBall.swift in Sources */,
+				58D15F5A2A8B8DB70065AACA /* ApiService.swift in Sources */,
+				580434E92AF84B8F0034ACB8 /* GameCarouselViewModel.swift in Sources */,
+				580434E72AF84A050034ACB8 /* GameListModel.swift in Sources */,
+				58C181DB2B167AAE00BEF046 /* BalanceViewModel.swift in Sources */,
+				58D15F572A8B84F60065AACA /* SplashView.swift in Sources */,
+				58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */,
+				582299512B06A997006AFBAC /* RecentDrawsModel.swift in Sources */,
+				580434E52AF845C70034ACB8 /* HomeView.swift in Sources */,
+				58D15F672A8D08560065AACA /* OtpView.swift in Sources */,
+				580434DD2AF7AA8A0034ACB8 /* LoginResponseModel.swift in Sources */,
+				58E5C9782AC9A18E003D92E6 /* LoginResponseViewModel.swift in Sources */,
+				58D15F5F2A8BE6920065AACA /* CustomTextField.swift in Sources */,
+				582299492B04F97B006AFBAC /* Header.swift in Sources */,
+				582299472B04F8E2006AFBAC /* GameView.swift in Sources */,
+				58D15F442A8B5EFC0065AACA /* ContentView.swift in Sources */,
+				5822994F2B06A86C006AFBAC /* DrawCarousel.swift in Sources */,
+				580434EC2AF84E540034ACB8 /* GameCarousel.swift in Sources */,
+				58D15F5D2A8B949B0065AACA /* CityViewModel.swift in Sources */,
+				58C181DD2B1715B400BEF046 /* MainView.swift in Sources */,
+				58D15F422A8B5EFC0065AACA /* LootoApp.swift in Sources */,
+				580434DF2AF8326C0034ACB8 /* CircleProgress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58D15F4A2A8B5EFD0065AACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58D15F4B2A8B5EFD0065AACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58D15F4D2A8B5EFD0065AACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Looto/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deniz.Looto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58D15F4E2A8B5EFD0065AACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Looto/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = deniz.Looto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58D15F392A8B5EFB0065AACA /* Build configuration list for PBXProject "Looto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D15F4A2A8B5EFD0065AACA /* Debug */,
+				58D15F4B2A8B5EFD0065AACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58D15F4C2A8B5EFD0065AACA /* Build configuration list for PBXNativeTarget "Looto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58D15F4D2A8B5EFD0065AACA /* Debug */,
+				58D15F4E2A8B5EFD0065AACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58D15F362A8B5EFB0065AACA /* Project object */;
+}
