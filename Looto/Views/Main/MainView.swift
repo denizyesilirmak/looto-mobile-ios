@@ -20,6 +20,7 @@ struct MainView: View {
                 }
                 .toolbarBackground(
                                 .blue, for: .navigationBar, .tabBar)
+                .accentColor(.red)
             ResultView()
                 .tabItem {
                     Label("Result", systemImage: "magnifyingglass")
@@ -32,7 +33,9 @@ struct MainView: View {
                 }
                 .toolbarBackground(
                                 .blue, for: .navigationBar, .tabBar)
+                .accentColor(.blue)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
