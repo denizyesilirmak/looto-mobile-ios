@@ -34,7 +34,6 @@ struct TicketListItem: View {
                 .frame(width: 80)
                 .padding(4)
                 .background(.red)
-                .cornerRadius(10)
         }
         .padding(10)
     }
