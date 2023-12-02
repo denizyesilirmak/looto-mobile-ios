@@ -39,7 +39,6 @@ struct SplashView: View {
             }
         }
         .onAppear {
-            print("splash")
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.isActive.toggle()
             }

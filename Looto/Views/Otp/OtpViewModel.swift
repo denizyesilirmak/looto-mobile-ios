@@ -23,9 +23,6 @@ class LoginOtpResponseViewModel: ObservableObject {
         }
         
         self.isOtpVerified = true
-        
-        print("data: \(data)")
-        
         self.loginOtpResponse = data
     }
 }

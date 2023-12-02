@@ -27,7 +27,7 @@ struct MainView: View {
                 }
                 .toolbarBackground(
                                 .blue, for: .navigationBar, .tabBar)
-            ProfileView(vm: vm)
+            ProfileView(balanceVm: vm)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

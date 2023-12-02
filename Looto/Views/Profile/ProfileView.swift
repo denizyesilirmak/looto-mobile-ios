@@ -17,7 +17,7 @@ enum PaymentAmount: Int32 {
 
 struct ProfileView: View {
     @AppStorage("token") private var userToken: String?
-    @ObservedObject var vm: BalanceViewModel
+    @ObservedObject var balanceVm: BalanceViewModel
     @State var paymentAmount: PaymentAmount = .oneHundred
     
     var body: some View {
@@ -27,7 +27,7 @@ struct ProfileView: View {
                 Gradient.Stop(color: .black, location: 0.55),
             ]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             VStack {
-                Header(vm: vm, shouldNavigate: false)
+                Header(vm: balanceVm, shouldNavigate: false)
                 HStack {
                     Button(action: {
                         Task {
@@ -79,7 +79,7 @@ struct ProfileView: View {
                 Button(action: {
                     Task {
                         do {
-                            await vm.addBalance(amount: paymentAmount.rawValue)
+                            await balanceVm.addBalance(amount: paymentAmount.rawValue)
                         }
                     }
                 }, label: {
@@ -108,9 +108,9 @@ struct ProfileView: View {
 }
 
 struct HeaderPreview: PreviewProvider {
-    @StateObject var vm = BalanceViewModel()
+    @StateObject var balanceVm = BalanceViewModel()
 
     static var previews: some View {
-        ProfileView(vm: BalanceViewModel())
+        ProfileView(balanceVm: BalanceViewModel())
     }
 }

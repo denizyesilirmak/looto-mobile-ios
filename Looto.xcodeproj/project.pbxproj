@@ -32,6 +32,9 @@
 		585ED64F2B1BA42400DDDF6B /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED64E2B1BA42400DDDF6B /* ResultModel.swift */; };
 		585ED6522B1BA4ED00DDDF6B /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6512B1BA4ED00DDDF6B /* Tickets.swift */; };
 		585ED6542B1BA58700DDDF6B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6532B1BA58700DDDF6B /* ResultViewModel.swift */; };
+		585ED6562B1BD97E00DDDF6B /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6552B1BD97E00DDDF6B /* EditProfileModel.swift */; };
+		585ED6592B1BD9C100DDDF6B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6582B1BD9C100DDDF6B /* Profile.swift */; };
+		585ED65C2B1BDB6100DDDF6B /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED65B2B1BDB6100DDDF6B /* EditProfileViewModel.swift */; };
 		5864E7C92B18B2E900E64439 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5864E7C82B18B2E900E64439 /* EditProfileView.swift */; };
 		589938D32B187C5600BD9A32 /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589938D22B187C5600BD9A32 /* ProfileSection.swift */; };
 		58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181D82B1674A900BEF046 /* BalanceModel.swift */; };
@@ -80,6 +83,9 @@
 		585ED64E2B1BA42400DDDF6B /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		585ED6512B1BA4ED00DDDF6B /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
 		585ED6532B1BA58700DDDF6B /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		585ED6552B1BD97E00DDDF6B /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		585ED6582B1BD9C100DDDF6B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		585ED65B2B1BDB6100DDDF6B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		5864E7C82B18B2E900E64439 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		589938D22B187C5600BD9A32 /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		58C181D82B1674A900BEF046 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
@@ -136,6 +142,14 @@
 				585ED6512B1BA4ED00DDDF6B /* Tickets.swift */,
 			);
 			path = Tickets;
+			sourceTree = "<group>";
+		};
+		585ED6572B1BD9AF00DDDF6B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				585ED6582B1BD9C100DDDF6B /* Profile.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		5864E7CA2B19F5F200E64439 /* Authentication */ = {
@@ -246,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				5864E7C82B18B2E900E64439 /* EditProfileView.swift */,
+				585ED6552B1BD97E00DDDF6B /* EditProfileModel.swift */,
+				585ED65B2B1BDB6100DDDF6B /* EditProfileViewModel.swift */,
 			);
 			path = ProfileEdit;
 			sourceTree = "<group>";
@@ -337,6 +353,7 @@
 		58D15F582A8B8D4B0065AACA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				585ED6572B1BD9AF00DDDF6B /* Profile */,
 				585ED6502B1BA4D900DDDF6B /* Tickets */,
 				585ED64B2B1B602300DDDF6B /* Draws */,
 				585ED6442B1B5DBC00DDDF6B /* General */,
@@ -457,6 +474,7 @@
 				580434DD2AF7AA8A0034ACB8 /* LoginModel.swift in Sources */,
 				58E5C9782AC9A18E003D92E6 /* LoginViewModel.swift in Sources */,
 				58D15F5F2A8BE6920065AACA /* CustomTextField.swift in Sources */,
+				585ED6562B1BD97E00DDDF6B /* EditProfileModel.swift in Sources */,
 				582299492B04F97B006AFBAC /* Header.swift in Sources */,
 				582299472B04F8E2006AFBAC /* GameView.swift in Sources */,
 				585ED64F2B1BA42400DDDF6B /* ResultModel.swift in Sources */,
@@ -470,6 +488,8 @@
 				589938D32B187C5600BD9A32 /* ProfileSection.swift in Sources */,
 				58D15F5D2A8B949B0065AACA /* CityViewModel.swift in Sources */,
 				58C181DD2B1715B400BEF046 /* MainView.swift in Sources */,
+				585ED6592B1BD9C100DDDF6B /* Profile.swift in Sources */,
+				585ED65C2B1BDB6100DDDF6B /* EditProfileViewModel.swift in Sources */,
 				58D15F422A8B5EFC0065AACA /* LootoApp.swift in Sources */,
 				580434DF2AF8326C0034ACB8 /* CircleProgress.swift in Sources */,
 			);

@@ -65,11 +65,10 @@ struct ResultView: View {
     @State var ticketCode: String = ""
     
     func checkTicket() {
-        print("check ticket")
         if(ticketCode.count == 0) {
             let alert = UIAlertController(title: "Error", message: "Please enter a ticket code", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                print("tapped ok")
+
             }))
             UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
         }

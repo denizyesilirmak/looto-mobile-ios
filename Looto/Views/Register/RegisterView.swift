@@ -30,7 +30,7 @@ struct RegisterView: View {
                     CustomCityPicker()
                     CustomDatePicker()
                     Button(action: {
-                        print("Register tapped!")
+
                     }) {
                         Text("Register")
                             .font(.headline)

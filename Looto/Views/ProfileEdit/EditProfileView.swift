@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct EditProfileView: View {
+    @StateObject var vm = EditProfileViewModel()
     @State var name = ""
     @State var lastname = ""
     @State var email = ""
@@ -17,6 +18,8 @@ struct EditProfileView: View {
     @State var city = ""
 
     var body: some View {
+
+        
         ZStack {
             LinearGradient(gradient: Gradient(stops: [
                 Gradient.Stop(color: Color.accentColor, location: 0),
@@ -72,6 +75,9 @@ struct EditProfileView: View {
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                 Button(action: {
+                    Task {
+                        await vm.updateProfile(name: name, lastName: lastname, email: email, phone: phone, cityId: city)
+                    }
                 }, label: {
                     HStack {
                         Text("Submit")
@@ -86,6 +92,15 @@ struct EditProfileView: View {
                 Spacer()
             }
             .padding()
+        }
+        .task {
+            await vm.fetchProfile()
+            
+            name = vm.profile?.name ?? ""
+            lastname = vm.profile?.lastName ?? ""
+            email = vm.profile?.email ?? ""
+            phone = vm.profile?.phoneNumber ?? ""
+            city = vm.profile?.cityID ?? ""
         }
     }
 }

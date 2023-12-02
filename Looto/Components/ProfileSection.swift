@@ -10,15 +10,21 @@ import Foundation
 import SwiftUI
 
 struct UserPropertySection: View {
-    @State var value: String?
-    @State var label: String?
+    @Binding var label: String?
+    @Binding var value: String?
 
     var body: some View {
         VStack {
             HStack {
-                Text("\(label ?? ""): \(value ?? "")")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                // label and value on single line
+                Text(label ?? "")
+                    .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(value ?? "")
+                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Spacer()
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 6, trailing: 10))
@@ -27,6 +33,8 @@ struct UserPropertySection: View {
 }
 
 struct ProfileSection: View {
+    
+    @StateObject var vm = EditProfileViewModel()
     
     var body: some View {
         VStack {
@@ -42,13 +50,24 @@ struct ProfileSection: View {
                         .foregroundColor(.white)
                 }
             }
+            
+            Spacer()
 
-            UserPropertySection(value: "Deniz", label: "Name")
-            UserPropertySection(value: "Yesilirmak", label: "Surname")
-            UserPropertySection(value: "dnzyslrmk@gmail.com", label: "Email")
-            UserPropertySection(value: "5306156145", label: "Phone")
-            UserPropertySection(value: "Zonguldak", label: "City")
-            UserPropertySection(value: "11/23/31", label: "Birtday")
+            VStack {
+                UserPropertySection(label: .constant("Name"), value: .constant(vm.profile?.name ?? ""))
+                UserPropertySection(label: .constant("Last Name"), value: .constant(vm.profile?.lastName ?? ""))
+                UserPropertySection(label: .constant("Email"), value: .constant(vm.profile?.email ?? ""))
+                UserPropertySection(label: .constant("Phone"), value: .constant(vm.profile?.phoneNumber ?? ""))
+                UserPropertySection(label: .constant("City"), value: .constant(vm.profile?.cityID ?? ""))
+            }
+            
+            Spacer()
+            
+        }
+        .onAppear {
+            Task {
+                await vm.fetchProfile()
+            }
         }
     }
 }

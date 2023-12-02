@@ -35,7 +35,7 @@ struct Header: View {
                             }
                         }
                         }else {
-                            NavigationLink(destination: ProfileView(vm: vm)) {
+                            NavigationLink(destination: ProfileView(balanceVm: vm)) {
                                 HStack {
                                     Image(systemName: "person.circle")
                                     .resizable()
@@ -74,7 +74,6 @@ struct Header: View {
                 .task {
                     do {
                         try await vm.getBalance()
-                        print("task-getbalance", vm.balance?.balance)
                     }
                     catch {
                         print(error.localizedDescription)

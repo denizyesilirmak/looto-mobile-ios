@@ -15,7 +15,7 @@ struct NumberBall: View {
     
     var body: some View {
         Button(action: {
-            print("Button tapped")
+
         }) {
             Text("\(number)")
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)

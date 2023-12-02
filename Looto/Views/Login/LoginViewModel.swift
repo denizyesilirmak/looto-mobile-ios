@@ -25,10 +25,6 @@ class LoginResponseViewModel: ObservableObject {
         }
 
         self.isOtpRecieved = true
-
-        print("request: \(email)")
-        print("data: \(data)")
-        
         self.loginResponse = data
     }
 }

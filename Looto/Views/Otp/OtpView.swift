@@ -64,13 +64,9 @@ struct OtpView: View {
                 }
                 Spacer()
                 Button(action: {
-                    print("verify tapped!")
                     Task {
                         await vm.loginOtp(email: "dnzyslrmk@gmail.com", otp: enterValue.joined())
-                        print(vm.loginOtpResponse.data.token)
-                        //TODO: Navigate to Main if otp valid
                         if(vm.loginOtpResponse.data.token != nil){
-                            print(vm.loginOtpResponse.data.token)
                             userToken = vm.loginOtpResponse.data.token
                         }
                     }

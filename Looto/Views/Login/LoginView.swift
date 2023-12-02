@@ -27,10 +27,9 @@ struct LoginView: View {
                 CustomTextField(label: "Email", placeholder: "Enter your email", iconName: "mail", content: $email)
                     .padding(.bottom, 20)
                 Button(action: {
-                        print("login tapped!")
+
                         Task {
                             await vm.login(email: email)
-                            print("response", vm.loginResponse.data.email)
                         }
                     }) {
                         Text("Login")

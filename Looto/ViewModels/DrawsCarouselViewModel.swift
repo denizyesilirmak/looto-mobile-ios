@@ -14,7 +14,6 @@ class DrawsCarouselViewModel: ObservableObject {
     @Published var hasError = false
     
     func getRecentDraws() async {
-        print("DrawsCarouselViewModel - getRecentDraws")
         guard let data = try? await ApiServiceDraws().fetchRecentDraws() else {
             self.draws = []
             self.hasError = true
