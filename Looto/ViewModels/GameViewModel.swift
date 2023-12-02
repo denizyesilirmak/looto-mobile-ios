@@ -14,7 +14,7 @@ class GameCarouselViewModel: ObservableObject {
     @Published var hasError = false
     
     func getGames() async {
-        guard let data = try? await APIService().fetchGameList() else {
+        guard let data = try? await ApiServiceGames().fetchGameList() else {
             self.games = []
             self.hasError = true
             self.errorMessage = "Server Error/getGames"

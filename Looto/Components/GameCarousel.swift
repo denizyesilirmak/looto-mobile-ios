@@ -38,7 +38,9 @@ struct GameCarousel: View {
             }
         }
         .task {
-            await vm.getGames()
+            if(vm.games.count == 0) {
+                await vm.getGames()
+            }
         }
     }
 }

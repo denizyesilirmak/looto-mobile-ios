@@ -44,7 +44,9 @@ struct DrawCarousel: View {
             }
         }
         .task {
-            await vm.getRecentDraws()
+            if(vm.draws.count == 0){
+                await vm.getRecentDraws()
+            }
         }
     }
 }

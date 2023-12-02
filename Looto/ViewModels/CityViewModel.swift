@@ -16,7 +16,7 @@ class CitiesViewModel: ObservableObject {
     @Published var hasError = false
     
     func getCities() async {
-        guard let data = try? await APIService().getCities() else {
+        guard let data = try? await ApiServiceGeneral().getCities() else {
             self.cities = []
             self.hasError = true
             self.errorMessage = "Server Error"

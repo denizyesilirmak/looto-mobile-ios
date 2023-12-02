@@ -17,7 +17,7 @@ class LoginResponseViewModel: ObservableObject {
     @Published var isOtpRecieved = false
 
     func login(email: String) async {
-        guard let data = try? await APIService().userLogin(email: email) else {
+        guard let data = try? await ApiServiceAuthentication().userLogin(email: email) else {
             self.loginResponse = LoginResponse(success: false, message: "", data: UserItem(email: ""))
             self.hasError = true
             self.errorMessage = "Server Error"
