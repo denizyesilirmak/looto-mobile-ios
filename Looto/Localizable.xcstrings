@@ -17,6 +17,9 @@
     "%lld" : {
 
     },
+    "12/12/23 12:34" : {
+
+    },
     "100 TL" : {
       "localizations" : {
         "en" : {
@@ -79,6 +82,9 @@
       }
     },
     "Check" : {
+
+    },
+    "Check winning status of your ticket" : {
 
     },
     "City" : {
@@ -160,6 +166,9 @@
           }
         }
       }
+    },
+    "Fortunas" : {
+
     },
     "Games" : {
       "localizations" : {
@@ -273,6 +282,9 @@
         }
       }
     },
+    "Lost" : {
+
+    },
     "Name" : {
       "localizations" : {
         "en" : {
@@ -317,6 +329,9 @@
 
     },
     "We sent 4 digit code to email" : {
+
+    },
+    "Your Tickets" : {
 
     }
   },
