@@ -96,6 +96,7 @@ struct ProfileView: View {
                 Spacer()
                 Button(action: {
                     userToken = nil
+                    UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: ContentView())
                 }, label: {
                     Text("Logout")
                 })

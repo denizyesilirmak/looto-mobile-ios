@@ -41,6 +41,7 @@ struct TicketListItem: View {
 }
 
 struct ResultView: View {
+    @StateObject var vm = BalanceViewModel()
     @State var ticketCode: String = ""
 
     func checkTicket() {
@@ -61,6 +62,7 @@ struct ResultView: View {
                 Gradient.Stop(color: .black, location: 0.55),
             ]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             VStack {
+                Header(vm: vm, shouldNavigate: true)
                 Text("Check winning status of your ticket")
                     .foregroundColor(.white)
                     .padding(10)
