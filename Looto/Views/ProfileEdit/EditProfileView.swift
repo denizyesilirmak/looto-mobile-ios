@@ -83,6 +83,7 @@ struct EditProfileView: View {
                             
                     }
                 })
+                Spacer()
             }
             .padding()
         }

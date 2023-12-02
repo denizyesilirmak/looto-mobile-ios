@@ -36,21 +36,26 @@ struct TicketListItem: View {
                     .foregroundColor(.white)
                     .font(.system(size: 15, weight: .bold, design: .rounded))
                     .frame(width: 80)
-                    .padding(4)
                     .background(.red)
             }
             ForEach(blocks) { block in
                 HStack {
                     ForEach(block.numbers, id: \.self) {number in
-                            Text("\(number)")
-                            .foregroundStyle(Color.red)
+                        Text("\(number)")
+                            .foregroundStyle(Color.black)
+                            .fontWeight(.bold)
                     }
                     Text(block.isWinner ? "WIN" : "LOST")
-                        .foregroundStyle(Color.red)
+                        .foregroundStyle(block.isWinner ? Color.green : Color.red)
+                        .fontWeight(.bold)
                 }
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
+                .background(.white)
+                .cornerRadius(10)
             }
         }
-        .padding(10)
+        .padding(4)
     }
 }
 
@@ -58,7 +63,7 @@ struct ResultView: View {
     @StateObject var balanceVm = BalanceViewModel()
     @StateObject var vm = ResultViewModel()
     @State var ticketCode: String = ""
-
+    
     func checkTicket() {
         print("check ticket")
         if(ticketCode.count == 0) {
@@ -69,7 +74,7 @@ struct ResultView: View {
             UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
         }
     }
-
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(stops: [
