@@ -78,6 +78,9 @@
         }
       }
     },
+    "Check" : {
+
+    },
     "City" : {
       "localizations" : {
         "en" : {
@@ -308,6 +311,9 @@
 
     },
     "Submit" : {
+
+    },
+    "Ticket Code" : {
 
     },
     "We sent 4 digit code to email" : {
