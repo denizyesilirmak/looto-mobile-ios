@@ -29,6 +29,9 @@
 		585ED6482B1B5F8C00DDDF6B /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6472B1B5F8C00DDDF6B /* Balance.swift */; };
 		585ED64A2B1B5FF500DDDF6B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6492B1B5FF500DDDF6B /* Games.swift */; };
 		585ED64D2B1B602C00DDDF6B /* Draws.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED64C2B1B602C00DDDF6B /* Draws.swift */; };
+		585ED64F2B1BA42400DDDF6B /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED64E2B1BA42400DDDF6B /* ResultModel.swift */; };
+		585ED6522B1BA4ED00DDDF6B /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6512B1BA4ED00DDDF6B /* Tickets.swift */; };
+		585ED6542B1BA58700DDDF6B /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6532B1BA58700DDDF6B /* ResultViewModel.swift */; };
 		5864E7C92B18B2E900E64439 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5864E7C82B18B2E900E64439 /* EditProfileView.swift */; };
 		589938D32B187C5600BD9A32 /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589938D22B187C5600BD9A32 /* ProfileSection.swift */; };
 		58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181D82B1674A900BEF046 /* BalanceModel.swift */; };
@@ -74,6 +77,9 @@
 		585ED6472B1B5F8C00DDDF6B /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		585ED6492B1B5FF500DDDF6B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		585ED64C2B1B602C00DDDF6B /* Draws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draws.swift; sourceTree = "<group>"; };
+		585ED64E2B1BA42400DDDF6B /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		585ED6512B1BA4ED00DDDF6B /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
+		585ED6532B1BA58700DDDF6B /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		5864E7C82B18B2E900E64439 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		589938D22B187C5600BD9A32 /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		58C181D82B1674A900BEF046 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
@@ -122,6 +128,14 @@
 				585ED64C2B1B602C00DDDF6B /* Draws.swift */,
 			);
 			path = Draws;
+			sourceTree = "<group>";
+		};
+		585ED6502B1BA4D900DDDF6B /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				585ED6512B1BA4ED00DDDF6B /* Tickets.swift */,
+			);
+			path = Tickets;
 			sourceTree = "<group>";
 		};
 		5864E7CA2B19F5F200E64439 /* Authentication */ = {
@@ -222,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				58C181DE2B1768F700BEF046 /* ResultView.swift */,
+				585ED64E2B1BA42400DDDF6B /* ResultModel.swift */,
+				585ED6532B1BA58700DDDF6B /* ResultViewModel.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -321,6 +337,7 @@
 		58D15F582A8B8D4B0065AACA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				585ED6502B1BA4D900DDDF6B /* Tickets */,
 				585ED64B2B1B602300DDDF6B /* Draws */,
 				585ED6442B1B5DBC00DDDF6B /* General */,
 				5864E7CC2B19F61700E64439 /* Games */,
@@ -414,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58D15F632A8CA3CF0065AACA /* CustomDatePicker.swift in Sources */,
+				585ED6542B1BA58700DDDF6B /* ResultViewModel.swift in Sources */,
 				580434E32AF8431F0034ACB8 /* OtpViewModel.swift in Sources */,
 				58D15F522A8B67130065AACA /* LoginView.swift in Sources */,
 				580434E12AF839640034ACB8 /* OtpModel.swift in Sources */,
@@ -441,6 +459,8 @@
 				58D15F5F2A8BE6920065AACA /* CustomTextField.swift in Sources */,
 				582299492B04F97B006AFBAC /* Header.swift in Sources */,
 				582299472B04F8E2006AFBAC /* GameView.swift in Sources */,
+				585ED64F2B1BA42400DDDF6B /* ResultModel.swift in Sources */,
+				585ED6522B1BA4ED00DDDF6B /* Tickets.swift in Sources */,
 				58D15F442A8B5EFC0065AACA /* ContentView.swift in Sources */,
 				5822994F2B06A86C006AFBAC /* DrawCarousel.swift in Sources */,
 				585ED64D2B1B602C00DDDF6B /* Draws.swift in Sources */,
@@ -580,6 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Looto/Preview Content\"";
+				DEVELOPMENT_TEAM = Z5779TQ33W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -608,6 +629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Looto/Preview Content\"";
+				DEVELOPMENT_TEAM = Z5779TQ33W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -9,38 +9,54 @@ import Foundation
 
 import SwiftUI
 
-
-
 struct TicketListItem: View {
+    @State var date: String = ""
+    @State var name: String = ""
+    @State var status: String = ""
+    @State var blocks: [Block] = []
+    
     var body: some View {
-        HStack {
-            Text("12/12/23 12:34")
-                .foregroundColor(.white)
-                .font(.system(size: 15, weight: .bold, design: .rounded))
-                .frame(width: 120)
-                .padding(4)
-                .cornerRadius(10)
-            Spacer()
-            Text("Fortunas")
-                .foregroundColor(.white)
-                .font(.system(size: 15, weight: .bold, design: .rounded))
-                .frame(width: 100)
-                .padding(4)
-                .cornerRadius(10)
-            Spacer()
-            Text("Lost")
-                .foregroundColor(.white)
-                .font(.system(size: 15, weight: .bold, design: .rounded))
-                .frame(width: 80)
-                .padding(4)
-                .background(.red)
+        VStack {
+            HStack {
+                Text(date)
+                    .foregroundColor(.white)
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .frame(width: 120)
+                    .padding(4)
+                    .cornerRadius(10)
+                Spacer()
+                Text(name)
+                    .foregroundColor(.white)
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .frame(width: 100)
+                    .padding(4)
+                    .cornerRadius(10)
+                Spacer()
+                Text(status)
+                    .foregroundColor(.white)
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .frame(width: 80)
+                    .padding(4)
+                    .background(.red)
+            }
+            ForEach(blocks) { block in
+                HStack {
+                    ForEach(block.numbers, id: \.self) {number in
+                            Text("\(number)")
+                            .foregroundStyle(Color.red)
+                    }
+                    Text(block.isWinner ? "WIN" : "LOST")
+                        .foregroundStyle(Color.red)
+                }
+            }
         }
         .padding(10)
     }
 }
 
 struct ResultView: View {
-    @StateObject var vm = BalanceViewModel()
+    @StateObject var balanceVm = BalanceViewModel()
+    @StateObject var vm = ResultViewModel()
     @State var ticketCode: String = ""
 
     func checkTicket() {
@@ -61,7 +77,7 @@ struct ResultView: View {
                 Gradient.Stop(color: .black, location: 0.55),
             ]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             VStack {
-                Header(vm: vm, shouldNavigate: true)
+                Header(vm: balanceVm, shouldNavigate: true)
                 Text("Check winning status of your ticket")
                     .foregroundColor(.white)
                     .padding(10)
@@ -96,14 +112,17 @@ struct ResultView: View {
                 }
                 ScrollView {
                     VStack {
-                        TicketListItem()
-                        TicketListItem()
-                        TicketListItem()
+                        ForEach(vm.tickets) {ticket in
+                            TicketListItem(date: "\(ticket.createdAt)", name: "GameName", status: "Lost", blocks: ticket.blocks )
+                        }
                     }
                 }
                 
             }
             .padding()
+        }
+        .task {
+            await vm.fetchTickets()
         }
     }
 }
