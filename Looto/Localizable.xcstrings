@@ -58,6 +58,7 @@
       }
     },
     "Balance" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

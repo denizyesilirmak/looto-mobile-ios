@@ -14,12 +14,11 @@ struct Header: View {
     @State var shouldNavigate: Bool = true
     
     var body: some View {
-            VStack {
                 HStack {
                     Image("LogoHorizontal")
-                        .resizable()
-                        .frame(width: 130, height: 42)
-                        .padding(.bottom, 20)
+                    .resizable()
+                    .frame(width: 110, height: 36)
+                    .padding(.leading, 0)
                     Spacer()
                     if(shouldNavigate) {
                         if(vm.hasError) {
@@ -45,9 +44,9 @@ struct Header: View {
                                     .foregroundColor(.white)
                                     if let balance = vm.balance?.balance {
                                         VStack {
-                                            Text("Balance")
                                             Text(String(format: "%.2f TRY", balance))
                                             .foregroundColor(.white)
+                                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                         }
                                     }
                                 }
@@ -63,7 +62,6 @@ struct Header: View {
                             
                              if let balance = vm.balance?.balance {
                                     VStack {
-                                        Text("Balance")
                                         Text(String(format: "%.2f TRY", balance))
                                         .foregroundColor(.white)
                                     }
@@ -73,16 +71,24 @@ struct Header: View {
 
 
                 }
-                .padding(10)                
-            }
-            .task {
-                do {
-                    try await vm.getBalance()
-                    print("task-getbalance", vm.balance?.balance)
+                .padding(10)
+                .task {
+                    do {
+                        try await vm.getBalance()
+                        print("task-getbalance", vm.balance?.balance)
+                    }
+                    catch {
+                        print(error.localizedDescription)
+                    }
                 }
-                catch {
-                    print(error.localizedDescription)
-                }
-            }
+    }
+}
+
+struct Header_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+            Color.black
+            Header(vm: BalanceViewModel())
+        }
     }
 }
