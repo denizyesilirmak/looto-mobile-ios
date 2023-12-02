@@ -17,7 +17,7 @@ struct GameCarousel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(vm.games, id: \.self) { game in
-                        NavigationLink(destination: GameView(numberCount: game.maximumNumber)) {
+                        NavigationLink(destination: GameView(numberCount: game.maximumNumber, gameId: game.id, gameName: game.name)) {
                             ZStack {
                             AsyncImage(url: URL(string: game.image)) { image in
                                 image.resizable()

@@ -18,11 +18,12 @@ struct NumberBall: View {
             print("Button tapped")
         }) {
             Text("\(number)")
-                .frame(width: 40, height: 40)
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .frame(width: 36, height: 36)
                 .background(Color.accentColor)
                 .clipShape(Circle())
                 .foregroundColor(.white)
-                .padding(.trailing, 10)
+                .padding(.trailing, 4)
         }
     }
 }

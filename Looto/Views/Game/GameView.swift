@@ -11,6 +11,8 @@ import SwiftUI
 
 struct GameView: View {
     @State var numberCount: Int = 50
+    @State var gameId: String = "testid"
+    @State var gameName: String = "Game Name"
     @StateObject var vm = BalanceViewModel()
 
     var body: some View {
@@ -21,8 +23,13 @@ struct GameView: View {
             ]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             VStack {
                 Header(vm: vm)
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 6), spacing: 10) {
-                        ForEach(0..<numberCount) { number in
+                    Text(gameName)
+                    .foregroundColor(.white)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .padding(6)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 8), spacing: 10) {
+                        ForEach(0..<numberCount, id: \.self) { number in
                             NumberBall(number: number + 1)
                         }
                     }   
