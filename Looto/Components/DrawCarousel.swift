@@ -9,8 +9,18 @@ import Foundation
 
 import SwiftUI
 
+func formatStringDate(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let newDate = dateFormatter.date(from: date)
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMM d, yyyy")
+        return dateFormatter.string(from: newDate!)
+}
+
 struct DrawCarousel: View {
     @StateObject var vm = DrawsCarouselViewModel()
+    @State var opacity: CGFloat = 0
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
@@ -24,28 +34,27 @@ struct DrawCarousel: View {
                         }
                         .frame(width: 300, height: 180)
                             VStack {
-                                Text(draw.game.name)
-                                .foregroundColor(.white)
-                                .font(.system(size: 15, weight: .bold, design: .rounded))
-                                .background(.black)
-                                Text("Prize: \(draw.game.prize)")
-                                .foregroundColor(.white)
-                                .font(.system(size: 15, weight: .bold, design: .rounded))
-                                .background(.black)
-                                Text("Prize: \(draw.createdAt)")
-                                .foregroundColor(.white)
-                                .font(.system(size: 15, weight: .bold, design: .rounded))
-                                .background(.black)
+                                Text("\(formatStringDate(date: draw.createdAt))")
+                                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                                    .padding(10)
+                                    .foregroundColor(.white)
+                                    .frame(width: 300, height: 180, alignment: .bottomLeading)
                             }
                         }
                     }
                 }
                 .padding(10)
+                .opacity(opacity)
             }
         }
         .task {
             if(vm.draws.count == 0){
                 await vm.getRecentDraws()
+            }
+        }
+        .onAppear {
+            withAnimation(Animation.easeOut(duration: 2.3).delay(1)) {
+                opacity = 1.0
             }
         }
     }

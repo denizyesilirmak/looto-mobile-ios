@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%@" : {
+
+    },
     "%@: %@" : {
       "localizations" : {
         "en" : {
@@ -15,6 +18,9 @@
       }
     },
     "%lld" : {
+
+    },
+    "%lld cr" : {
 
     },
     "100 TL" : {
@@ -299,12 +305,6 @@
 
     },
     "Please enter the verification code sent to email address" : {
-
-    },
-    "Prize: %@" : {
-
-    },
-    "Prize: %lld" : {
 
     },
     "Profile" : {

@@ -44,7 +44,7 @@ struct Header: View {
                                     .foregroundColor(.white)
                                     if let balance = vm.balance?.balance {
                                         VStack {
-                                            Text(String(format: "%.2f TRY", balance))
+                                            Text(String(format: "%.2f cr", balance))
                                             .foregroundColor(.white)
                                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                         }
@@ -59,10 +59,9 @@ struct Header: View {
                             .frame(width: 30, height: 30)
                             .padding(.leading, 20)
                             .foregroundColor(.white)
-                            
                              if let balance = vm.balance?.balance {
                                     VStack {
-                                        Text(String(format: "%.2f TRY", balance))
+                                        Text(String(format: "%.2f cr", balance))
                                         .foregroundColor(.white)
                                     }
                                 }

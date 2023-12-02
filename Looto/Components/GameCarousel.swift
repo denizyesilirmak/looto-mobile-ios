@@ -11,6 +11,7 @@ import SwiftUI
 
 struct GameCarousel: View {
     @StateObject var vm = GameCarouselViewModel()
+    @State var opacity: CGFloat = 0
     
     var body: some View {
         VStack {
@@ -25,9 +26,11 @@ struct GameCarousel: View {
                                 ProgressView()
                             }
                             .frame(width: 300, height: 180)
-                            Text(game.name)
-                                .foregroundColor(.black)
-                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                                Text("\(game.prize) cr")
+                                .foregroundColor(.white)
+                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                .padding(10)
+                                .frame(width: 300, height: 180, alignment: .bottomLeading)
                         }
                         .padding(0)
                         .cornerRadius(10)
@@ -35,11 +38,17 @@ struct GameCarousel: View {
                     }
                 }
                 .padding(10)
+                .opacity(opacity)
             }
         }
         .task {
             if(vm.games.count == 0) {
                 await vm.getGames()
+            }
+        }
+        .onAppear {
+            withAnimation(Animation.easeOut(duration: 2.3).delay(0.5)) {
+                opacity = 1.0
             }
         }
     }

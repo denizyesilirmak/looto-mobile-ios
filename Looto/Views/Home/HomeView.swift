@@ -23,24 +23,18 @@ struct HomeView: View {
                 Text("Games")
                     .foregroundColor(.white)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title2)
                     .frame(maxWidth: .infinity)
                 GameCarousel()
                 Text("Last Draws")
                     .foregroundColor(.white)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title2)
                     .frame(maxWidth: .infinity)
                 DrawCarousel()
                 Spacer()
             }
             .padding()
         }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
