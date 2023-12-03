@@ -11,6 +11,7 @@ import SwiftUI
 
 struct EditProfileView: View {
     @StateObject var vm = EditProfileViewModel()
+    @StateObject var cityVM = CitiesViewModel()
     @State var name = ""
     @State var lastname = ""
     @State var email = ""
@@ -49,7 +50,9 @@ struct EditProfileView: View {
                         .font(.system(size: 18, weight: .bold, design: .rounded))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    TextField("Enter your email", text: $email)
+                    TextField("Enter your email", text: .constant(email))
+                        .foregroundColor(.gray)
+                        .disabled(true)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
@@ -76,7 +79,10 @@ struct EditProfileView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                 Button(action: {
                     Task {
-                        await vm.updateProfile(name: name, lastName: lastname, email: email, phone: phone, cityId: city)
+                        if(name.isEmpty || lastname.isEmpty || phone.isEmpty || city.isEmpty) {
+                            return
+                        }
+                        await vm.updateProfile(name: name, lastName: lastname, phone: phone, cityId: city)
                     }
                 }, label: {
                     HStack {
@@ -86,7 +92,6 @@ struct EditProfileView: View {
                             .padding()
                             .background(Color.accentColor)
                             .cornerRadius(10)
-                            
                     }
                 })
                 Spacer()
@@ -100,7 +105,7 @@ struct EditProfileView: View {
             lastname = vm.profile?.lastName ?? ""
             email = vm.profile?.email ?? ""
             phone = vm.profile?.phoneNumber ?? ""
-            city = vm.profile?.cityID ?? ""
+            city = cityVM.cities.first(where: { $0.id == vm.profile?.cityID })?.name ?? "test"
         }
     }
 }

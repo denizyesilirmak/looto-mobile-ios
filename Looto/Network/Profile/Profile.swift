@@ -25,27 +25,25 @@ struct ApiServiceProfile {
         return result
     }
     
-    struct updateUserBody: Encodable {
+    struct UpdateUserBody: Encodable {
         let name: String
         let lastName: String
-        let email: String
         let phone: String
         let cityId: String
     }
 
-    @MainActor func updateProfile(userToken: String, body: updateUserBody) async throws -> ProfileModel {
+    @MainActor func updateProfile(userToken: String, name: String, lastName: String, phone: String, cityId: String) async throws -> ProfileModel {
         guard let url = URL(string: "\(BASE_URL)/profile/user") else {
             throw NSError(domain: "Invalid Url", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
         }
+        
+        let body = UpdateUserBody(name: name, lastName: lastName, phone: phone, cityId: cityId)
         
         var request = URLRequest(url: url)
         request.httpMethod = "PATCH"
         request.setValue("token \(userToken)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let encoder = JSONEncoder()
-        let jsonData = try encoder.encode(body)
-        request.httpBody = jsonData
+        request.httpBody = try JSONEncoder().encode(body)
         
         let (data, _) = try await URLSession.shared.data(for: request)
         

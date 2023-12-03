@@ -18,7 +18,7 @@ class EditProfileViewModel: ObservableObject {
     func fetchProfile() async {
         guard let userToken = userToken, let data = try? await ApiServiceProfile().fetchProfile(userToken: userToken) else {
             self.hasError = true
-            self.errorMessage = "Server Error/getRecentDraws"
+            self.errorMessage = "Server Error/EditProfileViewModel"
             return
         }
                 
@@ -26,12 +26,16 @@ class EditProfileViewModel: ObservableObject {
         self.profile = data.data
     }
     
-    func updateProfile(name: String, lastName: String, email: String, phone: String, cityId: String) async {
-        guard let userToken = userToken, let data = try? await ApiServiceProfile().updateProfile(userToken: userToken, body: ApiServiceProfile.updateUserBody(name: name, lastName: lastName, email: email, phone: phone, cityId: cityId)) else {
+    func updateProfile(name: String, lastName: String, phone: String, cityId: String) async {
+        
+        guard let userToken = userToken, let data = try? await ApiServiceProfile().updateProfile(userToken: userToken, name: name, lastName: lastName, phone: phone, cityId: cityId) else {
             self.hasError = true
-            self.errorMessage = "Server Error/getRecentDraws"
+            self.errorMessage = "Server Error/EditProfileViewModel"
+            print("updateProfile - error")
             return
         }
+        
+        print("updateProfile - data", data)
                 
         self.hasError = false
         self.profile = data.data

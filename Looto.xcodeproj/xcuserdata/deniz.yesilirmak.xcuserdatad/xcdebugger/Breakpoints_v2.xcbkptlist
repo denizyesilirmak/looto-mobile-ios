@@ -7,77 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "48317CE2-5CF1-4B81-98F7-E62346215E4C"
+            uuid = "D441F642-921D-4049-A14A-BDA23D676A6E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Looto/Network/Profile/Profile.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fetchProfile(userToken:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateProfile(userToken:name:lastName:email:phone:cityId:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "48317CE2-5CF1-4B81-98F7-E62346215E4C - 4979adcb2edb4af1"
+                  uuid = "D441F642-921D-4049-A14A-BDA23D676A6E - 3fea8853ae54ce03"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Looto.ApiServiceProfile.fetchProfile(userToken: Swift.String) async throws -&gt; Looto.ProfileModel"
+                  symbolName = "(3) suspend resume partial function for Looto.ApiServiceProfile.updateProfile(userToken: Swift.String, name: Swift.String, lastName: Swift.String, email: Swift.String, phone: Swift.String, cityId: Swift.String) async throws -&gt; Looto.ProfileModel"
                   moduleName = "Looto"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/deniz.yesilirmak/Documents/personal/Looto/Looto/Network/Profile/Profile.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "1028">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "760">
                </Location>
                <Location
-                  uuid = "48317CE2-5CF1-4B81-98F7-E62346215E4C - 213d8a34ccd4d09b"
+                  uuid = "D441F642-921D-4049-A14A-BDA23D676A6E - 7d1a6b8c9fbeacdb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Looto.ApiServiceProfile.fetchProfile(userToken: Swift.String) async throws -&gt; Looto.ProfileModel"
+                  symbolName = "(3) suspend resume partial function for Looto.ApiServiceProfile.updateProfile(userToken: Swift.String, name: Swift.String, lastName: Swift.String, phone: Swift.String, cityId: Swift.String) async throws -&gt; Looto.ProfileModel"
                   moduleName = "Looto"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/deniz.yesilirmak/Documents/personal/Looto/Looto/Network/Profile/Profile.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "48317CE2-5CF1-4B81-98F7-E62346215E4C - de228c48afa584f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Looto.ApiServiceProfile.fetchProfile(userToken: Swift.String) async throws -&gt; Looto.ProfileModel"
-                  moduleName = "Looto"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/deniz.yesilirmak/Documents/personal/Looto/Looto/Network/Profile/Profile.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "48317CE2-5CF1-4B81-98F7-E62346215E4C - e7417c976f3765f4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Looto.ApiServiceProfile.fetchProfile(userToken: Swift.String) async throws -&gt; Looto.ProfileModel"
-                  moduleName = "Looto"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/deniz.yesilirmak/Documents/personal/Looto/Looto/Network/Profile/Profile.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "748">
                </Location>
             </Locations>
          </BreakpointContent>
