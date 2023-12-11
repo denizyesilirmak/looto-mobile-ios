@@ -36,6 +36,7 @@
 		585ED6592B1BD9C100DDDF6B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6582B1BD9C100DDDF6B /* Profile.swift */; };
 		585ED65C2B1BDB6100DDDF6B /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED65B2B1BDB6100DDDF6B /* EditProfileViewModel.swift */; };
 		5864E7C92B18B2E900E64439 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5864E7C82B18B2E900E64439 /* EditProfileView.swift */; };
+		586F30692B260D2800D73611 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F30682B260D2800D73611 /* Array+Extensions.swift */; };
 		589938D32B187C5600BD9A32 /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589938D22B187C5600BD9A32 /* ProfileSection.swift */; };
 		58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181D82B1674A900BEF046 /* BalanceModel.swift */; };
 		58C181DB2B167AAE00BEF046 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C181DA2B167AAE00BEF046 /* BalanceViewModel.swift */; };
@@ -87,6 +88,7 @@
 		585ED6582B1BD9C100DDDF6B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		585ED65B2B1BDB6100DDDF6B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		5864E7C82B18B2E900E64439 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		586F30682B260D2800D73611 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		589938D22B187C5600BD9A32 /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		58C181D82B1674A900BEF046 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		58C181DA2B167AAE00BEF046 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
@@ -266,6 +268,14 @@
 			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
+		586F30672B260CFF00D73611 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				586F30682B260D2800D73611 /* Array+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		58D15F352A8B5EFB0065AACA = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +295,7 @@
 		58D15F402A8B5EFC0065AACA /* Looto */ = {
 			isa = PBXGroup;
 			children = (
+				586F30672B260CFF00D73611 /* Extensions */,
 				58D15F5B2A8B947D0065AACA /* ViewModels */,
 				58D15F582A8B8D4B0065AACA /* Network */,
 				58D15F552A8B6D4A0065AACA /* Components */,
@@ -464,6 +475,7 @@
 				580434E92AF84B8F0034ACB8 /* GameViewModel.swift in Sources */,
 				580434E72AF84A050034ACB8 /* GameModel.swift in Sources */,
 				58C181DB2B167AAE00BEF046 /* BalanceViewModel.swift in Sources */,
+				586F30692B260D2800D73611 /* Array+Extensions.swift in Sources */,
 				58D15F572A8B84F60065AACA /* SplashView.swift in Sources */,
 				585ED64A2B1B5FF500DDDF6B /* Games.swift in Sources */,
 				58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */,

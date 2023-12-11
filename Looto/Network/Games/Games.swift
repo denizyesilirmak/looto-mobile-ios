@@ -16,7 +16,7 @@ struct ApiServiceGames {
         guard let (data, response) = try? await URLSession.shared.data(from: url) else{
             throw APIError.requestError
         }
-                
+        
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
             throw APIError.statusNotOk
         }

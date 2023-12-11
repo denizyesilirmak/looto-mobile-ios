@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "updateProfile(userToken:name:lastName:email:phone:cityId:)"
+            landmarkName = "updateProfile(userToken:name:lastName:phone:cityId:)"
             landmarkType = "7">
             <Locations>
                <Location

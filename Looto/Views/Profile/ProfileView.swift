@@ -32,7 +32,6 @@ struct ProfileView: View {
                     Button(action: {
                         Task {
                             do {
-                                //await vm.addBalance(amount: 100)
                                 paymentAmount = .oneHundred
                             }
                         }
@@ -43,11 +42,12 @@ struct ProfileView: View {
                             .padding()
                             .background(paymentAmount == .oneHundred ? Color.accentColor : Color.gray)
                             .cornerRadius(10)
+                            //scale animation
+                            .scaleEffect(paymentAmount == .oneHundred ? 1 : 0.9)
                     })
                     Button(action: {
                         Task {
                             do {
-                                //await vm.addBalance(amount: 200)
                                 paymentAmount = .twoHundred
                             }
                         }
@@ -58,11 +58,11 @@ struct ProfileView: View {
                             .padding()
                             .background(paymentAmount == .twoHundred ? Color.accentColor : Color.gray)
                             .cornerRadius(10)
+                            .scaleEffect(paymentAmount == .twoHundred ? 1 : 0.9)
                     })   
                     Button(action: {
                         Task {
                             do {
-                                //await vm.addBalance(amount: 500)
                                 paymentAmount = .fiveHundred
                             }
                         }
@@ -73,6 +73,7 @@ struct ProfileView: View {
                             .padding()
                             .background(paymentAmount == .fiveHundred ? Color.accentColor : Color.gray)
                             .cornerRadius(10)
+                            .scaleEffect(paymentAmount == .fiveHundred ? 1 : 0.9)
                     })                 
                 }
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
@@ -102,7 +103,6 @@ struct ProfileView: View {
                 })
             }
             .padding()
-            
         }
     }
 }

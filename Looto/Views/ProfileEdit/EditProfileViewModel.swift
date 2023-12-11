@@ -14,6 +14,7 @@ class EditProfileViewModel: ObservableObject {
     @Published var profile: UserProfile?
     @Published var errorMessage = ""
     @Published var hasError = false
+    @Published var profileUpdated = false
     
     func fetchProfile() async {
         guard let userToken = userToken, let data = try? await ApiServiceProfile().fetchProfile(userToken: userToken) else {
@@ -32,6 +33,7 @@ class EditProfileViewModel: ObservableObject {
             self.hasError = true
             self.errorMessage = "Server Error/EditProfileViewModel"
             print("updateProfile - error")
+            self.profileUpdated = true
             return
         }
         
@@ -39,5 +41,7 @@ class EditProfileViewModel: ObservableObject {
                 
         self.hasError = false
         self.profile = data.data
+        self.profileUpdated = true
+        print("self.profileUpdated ",self.profileUpdated )
     }
 }

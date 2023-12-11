@@ -15,25 +15,53 @@ struct GameView: View {
     @State var gameName: String = "Game Name"
     @StateObject var vm = BalanceViewModel()
 
+    @State var rows: [[Int]?] = [[1,2,3,5,6]]
+    
+    @StateObject var viewModel = GameViewModel()
+    
+    // the grid layout for selected numbers
+    let selectedColumns = Array(repeating: GridItem(.flexible()), count: 5)
+    
     var body: some View {
+        
         ZStack {
             LinearGradient(gradient: Gradient(stops: [
                 Gradient.Stop(color: Color.accentColor, location: 0),
                 Gradient.Stop(color: .black, location: 0.55),
             ]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             VStack {
-                Header(vm: vm)
-                    Text(gameName)
-                    .foregroundColor(.white)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .padding(6)
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 8), spacing: 10) {
-                        ForEach(0..<numberCount, id: \.self) { number in
-                            NumberBall(number: number + 1)
+                // The grid of numbers
+                ScrollView {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 6)) {
+                        ForEach(1...90, id: \.self) { number in
+                            NumberBall(number: number, alwaysPurple: false, viewModel: viewModel)
                         }
-                    }   
-                    Spacer()
+                    }
+                }
+                
+                Divider()
+                    .background(Color.white)
+                
+                // the selected numbers in a 6x6 grid
+                LazyVGrid(columns: selectedColumns) {
+                    ForEach(viewModel.selectedNumbersChunks, id: \.self) { chunk in
+                        ForEach(chunk, id: \.self) { number in
+                            NumberBall(number: number, alwaysPurple: true, viewModel: viewModel)
+                        }
+                        
+                        if(chunk.count == 5) {
+                            ZStack(alignment: .trailing) {
+                                Text("Ready")
+                                    .foregroundStyle(Color.white)
+                                    .fontWeight(.bold)
+                            }
+                            .frame(width: 20, height: 48)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.top)
+                
             }
             .padding()
         }

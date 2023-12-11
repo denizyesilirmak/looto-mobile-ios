@@ -11,16 +11,16 @@ import SwiftUI
 
 struct EditProfileView: View {
     @StateObject var vm = EditProfileViewModel()
+    @StateObject var balanceVm = BalanceViewModel()
     @StateObject var cityVM = CitiesViewModel()
     @State var name = ""
     @State var lastname = ""
     @State var email = ""
     @State var phone = ""
     @State var city = ""
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-
-        
         ZStack {
             LinearGradient(gradient: Gradient(stops: [
                 Gradient.Stop(color: Color.accentColor, location: 0),
@@ -105,8 +105,13 @@ struct EditProfileView: View {
             lastname = vm.profile?.lastName ?? ""
             email = vm.profile?.email ?? ""
             phone = vm.profile?.phoneNumber ?? ""
-            city = cityVM.cities.first(where: { $0.id == vm.profile?.cityID })?.name ?? "test"
+            city = vm.profile?.cityID ?? ""
         }
+        .onChange(of: vm.profileUpdated, perform: { value in
+            if value {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        })
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct GameCarousel: View {
-    @StateObject var vm = GameCarouselViewModel()
+    @StateObject var vm = GameViewModel()
     @State var opacity: CGFloat = 0
     
     var body: some View {
