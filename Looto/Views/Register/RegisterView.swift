@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject var registerViewModel = RegisterViewModel()
+    @State private var toast: Toast? = nil
+
     @State var email: String = ""
     @State var name: String = ""
     @State var lastname: String = ""
     @State var phone: String = ""
-
+    @State var city: String = ""
     @State var value: CGFloat = 0
+    @State var birthday = Date()
 
     var body: some View {
         ZStack {
@@ -27,10 +31,31 @@ struct RegisterView: View {
                     CustomTextField(label: "Name", placeholder: "Enter your name",  iconName: "person", content: $name, hasError: true)
                     CustomTextField(label: "Lastname", placeholder: "Enter your lastname", iconName: "person", content: $lastname)
                     CustomTextField(label: "Phone", placeholder: "Enter your phone", iconName: "phone", content: $phone, isPhone: true)
-                    CustomCityPicker()
-                    CustomDatePicker()
+                    CustomCityPicker(selectedCityId: $city)
+                    CustomDatePicker(selectedDate: $birthday)
                     Button(action: {
 
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "dd/MM/yyyy"
+                        let dateString = dateFormatter.string(from: birthday)
+
+                        Task {
+
+                            if(name.isEmpty || lastname.isEmpty || phone.isEmpty || city.isEmpty || dateString.isEmpty){
+                                toast = Toast(style: .error, message: "Please fill all fields", duration: 3)
+                                return
+                            }
+                            else{
+                                await registerViewModel.register(email: email, name: name, lastname: lastname, phone: phone, city: city, birthday: dateString)
+                                if registerViewModel.hasError {
+                                    print("error")
+                                    toast = Toast(style: .error, message: registerViewModel.errorMessage, duration: 3)
+                                }
+                                else{
+                                    toast = Toast(style: .success, message: "Register success", duration: 3)
+                                }
+                            }
+                        }
                     }) {
                         Text("Register")
                             .font(.headline)
@@ -54,6 +79,7 @@ struct RegisterView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .toastView(toast: $toast)
     }
 }
 

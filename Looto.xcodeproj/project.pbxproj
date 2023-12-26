@@ -23,6 +23,10 @@
 		5822994F2B06A86C006AFBAC /* DrawCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5822994E2B06A86C006AFBAC /* DrawCarousel.swift */; };
 		582299512B06A997006AFBAC /* RecentDrawsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299502B06A997006AFBAC /* RecentDrawsModel.swift */; };
 		582299532B077882006AFBAC /* DrawsCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582299522B077882006AFBAC /* DrawsCarouselViewModel.swift */; };
+		5826995B2B3859F0005EDD2A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826995A2B3859F0005EDD2A /* Toast.swift */; };
+		5826995D2B3A1391005EDD2A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826995C2B3A1391005EDD2A /* RegisterViewModel.swift */; };
+		5826995F2B3A139E005EDD2A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5826995E2B3A139E005EDD2A /* RegisterModel.swift */; };
+		582699612B3B1F4D005EDD2A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582699602B3B1F4D005EDD2A /* ErrorModel.swift */; };
 		585ED6412B1B58E200DDDF6B /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 585ED6402B1B58E200DDDF6B /* Localizable.xcstrings */; };
 		585ED6432B1B5DAC00DDDF6B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6422B1B5DAC00DDDF6B /* Authentication.swift */; };
 		585ED6462B1B5DC500DDDF6B /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585ED6452B1B5DC500DDDF6B /* General.swift */; };
@@ -75,6 +79,10 @@
 		5822994E2B06A86C006AFBAC /* DrawCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCarousel.swift; sourceTree = "<group>"; };
 		582299502B06A997006AFBAC /* RecentDrawsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDrawsModel.swift; sourceTree = "<group>"; };
 		582299522B077882006AFBAC /* DrawsCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsCarouselViewModel.swift; sourceTree = "<group>"; };
+		5826995A2B3859F0005EDD2A /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		5826995C2B3A1391005EDD2A /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		5826995E2B3A139E005EDD2A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		582699602B3B1F4D005EDD2A /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		585ED6402B1B58E200DDDF6B /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		585ED6422B1B5DAC00DDDF6B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		585ED6452B1B5DC500DDDF6B /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
@@ -192,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				58D15F532A8B6BED0065AACA /* RegisterView.swift */,
+				5826995C2B3A1391005EDD2A /* RegisterViewModel.swift */,
+				5826995E2B3A139E005EDD2A /* RegisterModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -341,6 +351,7 @@
 				580434DA2AF7A8CC0034ACB8 /* CityModel.swift */,
 				582299502B06A997006AFBAC /* RecentDrawsModel.swift */,
 				58C181D82B1674A900BEF046 /* BalanceModel.swift */,
+				582699602B3B1F4D005EDD2A /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 				5822994A2B04FA0B006AFBAC /* NumberBall.swift */,
 				5822994E2B06A86C006AFBAC /* DrawCarousel.swift */,
 				589938D22B187C5600BD9A32 /* ProfileSection.swift */,
+				5826995A2B3859F0005EDD2A /* Toast.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -466,16 +478,19 @@
 				58D15F542A8B6BED0065AACA /* RegisterView.swift in Sources */,
 				585ED6482B1B5F8C00DDDF6B /* Balance.swift in Sources */,
 				58C181DF2B1768F700BEF046 /* ResultView.swift in Sources */,
+				5826995B2B3859F0005EDD2A /* Toast.swift in Sources */,
 				58D15F612A8BEEBB0065AACA /* CustomCityPicker.swift in Sources */,
 				582299532B077882006AFBAC /* DrawsCarouselViewModel.swift in Sources */,
 				580434DB2AF7A8CC0034ACB8 /* CityModel.swift in Sources */,
 				5822994D2B05075A006AFBAC /* ProfileView.swift in Sources */,
 				5822994B2B04FA0B006AFBAC /* NumberBall.swift in Sources */,
 				58D15F5A2A8B8DB70065AACA /* ApiService.swift in Sources */,
+				5826995F2B3A139E005EDD2A /* RegisterModel.swift in Sources */,
 				580434E92AF84B8F0034ACB8 /* GameViewModel.swift in Sources */,
 				580434E72AF84A050034ACB8 /* GameModel.swift in Sources */,
 				58C181DB2B167AAE00BEF046 /* BalanceViewModel.swift in Sources */,
 				586F30692B260D2800D73611 /* Array+Extensions.swift in Sources */,
+				5826995D2B3A1391005EDD2A /* RegisterViewModel.swift in Sources */,
 				58D15F572A8B84F60065AACA /* SplashView.swift in Sources */,
 				585ED64A2B1B5FF500DDDF6B /* Games.swift in Sources */,
 				58C181D92B1674A900BEF046 /* BalanceModel.swift in Sources */,
@@ -485,6 +500,7 @@
 				58D15F672A8D08560065AACA /* OtpView.swift in Sources */,
 				580434DD2AF7AA8A0034ACB8 /* LoginModel.swift in Sources */,
 				58E5C9782AC9A18E003D92E6 /* LoginViewModel.swift in Sources */,
+				582699612B3B1F4D005EDD2A /* ErrorModel.swift in Sources */,
 				58D15F5F2A8BE6920065AACA /* CustomTextField.swift in Sources */,
 				585ED6562B1BD97E00DDDF6B /* EditProfileModel.swift in Sources */,
 				582299492B04F97B006AFBAC /* Header.swift in Sources */,

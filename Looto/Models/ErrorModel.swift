@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ErrorModel: Decodable {
+    let success: Bool
+    let message: String
+    let code: Int
+}

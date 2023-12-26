@@ -170,6 +170,9 @@
         }
       }
     },
+    "Hello, world!" : {
+
+    },
     "Home" : {
       "localizations" : {
         "en" : {
@@ -222,6 +225,7 @@
       }
     },
     "Loading..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -298,9 +302,6 @@
 
     },
     "Profile" : {
-
-    },
-    "Ready" : {
 
     },
     "Register" : {

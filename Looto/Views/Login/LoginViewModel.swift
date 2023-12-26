@@ -20,10 +20,17 @@ class LoginResponseViewModel: ObservableObject {
         guard let data = try? await ApiServiceAuthentication().userLogin(email: email) else {
             self.loginResponse = LoginResponse(success: false, message: "", data: UserItem(email: ""))
             self.hasError = true
-            self.errorMessage = "Server Error"
+            self.errorMessage = "Error occured while login"
             return
         }
 
+        if !data.success {
+            self.loginResponse = LoginResponse(success: false, message: "", data: UserItem(email: ""))
+            self.hasError = true
+            self.errorMessage = "Error occured while login"
+            return
+        }
+        
         self.isOtpRecieved = true
         self.loginResponse = data
     }

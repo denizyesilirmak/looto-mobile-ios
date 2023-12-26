@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct LoginBody: Encodable {
+    let email: String
+}
+
+struct LoginOtpBody: Encodable {
+    let email: String
+    let otp: String
+}
+
 struct LoginResponse: Codable {
     let success: Bool
     let message: String

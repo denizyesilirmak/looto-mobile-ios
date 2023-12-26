@@ -15,7 +15,7 @@ struct GameView: View {
     @State var gameName: String = "Game Name"
     @StateObject var vm = BalanceViewModel()
 
-    @State var rows: [[Int]?] = [[1,2,3,5,6]]
+    @State var rows: [[Int]?] = [[1,2,3,5,6], [2,1,3,4,5]]
     
     @StateObject var viewModel = GameViewModel()
     
@@ -42,25 +42,18 @@ struct GameView: View {
                 Divider()
                     .background(Color.white)
                 
-                // the selected numbers in a 6x6 grid
-                LazyVGrid(columns: selectedColumns) {
-                    ForEach(viewModel.selectedNumbersChunks, id: \.self) { chunk in
-                        ForEach(chunk, id: \.self) { number in
-                            NumberBall(number: number, alwaysPurple: true, viewModel: viewModel)
-                        }
-                        
-                        if(chunk.count == 5) {
-                            ZStack(alignment: .trailing) {
-                                Text("Ready")
-                                    .foregroundStyle(Color.white)
-                                    .fontWeight(.bold)
+                // The grid of selected numbers
+                ScrollView {
+                    LazyVGrid(columns: selectedColumns) {
+                        ForEach(rows, id: \.self) { row in
+                            if let row = row {
+                                ForEach(row, id: \.self) { number in
+                                    NumberBall(number: number, alwaysPurple: true, viewModel: viewModel)
+                                }
                             }
-                            .frame(width: 20, height: 48)
                         }
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.top)
                 
             }
             .padding()

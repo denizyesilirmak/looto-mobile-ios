@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CustomCityPicker: View {
     @StateObject var vm = CitiesViewModel()
+    @Binding var selectedCityId: String
+
     
     var body: some View {
         VStack {
@@ -17,18 +19,22 @@ struct CustomCityPicker: View {
                 .font(.system(size: 16, weight: .bold, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            Picker(selection: .constant(1), label: Text("City")
-            ) {
-                if(vm.cities.count == 0) {
-                    Text("Loading...").tag(1)
-                }
-                ForEach(vm.cities) {city in
-                    Text(city.name).tag(city._id)
+
+            Picker(selection: $vm.selectedCityId, label: Text("City")) {
+                ForEach(vm.cities, id: \.self) { city in
+                    Text(city.name)
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 16, weight: .bold, design: .default))
+                        .tag(city.id)
                 }
             }
-            .task() {
-                await vm.getCities()
+            .onChange(of: vm.selectedCityId) { value in
+                print("selectedCityId: \(value)")
+                selectedCityId = value
             }
+            .pickerStyle(MenuPickerStyle())
+            .background(Color.white)
+            .cornerRadius(10.0)
             .frame(maxWidth: .infinity)
             .cornerRadius(10.0)
             .padding(.top, 10)
@@ -37,6 +43,11 @@ struct CustomCityPicker: View {
             .cornerRadius(10.0)
         }
         .padding(0)
+        .onAppear {
+            Task {
+                await vm.getCities()
+            }
+        }
     }
 }
 
@@ -45,7 +56,7 @@ struct CustomCityPicker_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomCityPicker()
+            CustomCityPicker(selectedCityId: .constant(""))
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @StateObject var vm = LoginResponseViewModel()
     @State var email: String = ""
+    @State private var toast: Toast? = nil
 
     var body: some View {
         ZStack {
@@ -27,9 +28,14 @@ struct LoginView: View {
                 CustomTextField(label: "Email", placeholder: "Enter your email", iconName: "mail", content: $email)
                     .padding(.bottom, 20)
                 Button(action: {
-
                         Task {
                             await vm.login(email: email)
+                            if vm.hasError {
+                                // show alert here
+                                print("error")
+                                toast = Toast(style: .error, message: vm.errorMessage, duration: 3)
+
+                            }
                         }
                     }) {
                         Text("Login")
@@ -58,6 +64,7 @@ struct LoginView: View {
             }
             .padding()
         }
+        .toastView(toast: $toast)
         .background(
             NavigationLink(
                 destination: OtpView(numberOfFields: 4),

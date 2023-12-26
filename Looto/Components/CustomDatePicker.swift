@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct CustomDatePicker: View {
+    @Binding var selectedDate: Date
+
     var body: some View {
         VStack {
             Text("Birthday")
                 .foregroundColor(Color.white)
                 .font(.system(size: 16, weight: .bold, design: .default))
                 .frame(maxWidth: .infinity, alignment: .leading)
-            DatePicker("Birthday", selection: .constant(Date()), displayedComponents: .date)
-                .colorScheme(.dark)
+            //Birthday picker with center alignment
+            DatePicker("", selection: $selectedDate, displayedComponents: .date)
                 .labelsHidden()
-                .padding(.top, 12)
-                .padding(.bottom, 12)
                 .frame(maxWidth: .infinity, alignment: .center)
-                .background(Color.white.opacity(1))
+                .padding(.horizontal, 16)
+                .padding(8)
+                .background(Color.white)
                 .cornerRadius(10)
+                .padding(.top, 4)
         }
         .padding(2)
     }
@@ -29,7 +32,7 @@ struct CustomDatePicker: View {
 
 struct CustomDatePicker_Previews: PreviewProvider {
     static var previews: some View {
-        CustomDatePicker()
+        CustomDatePicker(selectedDate: .constant(Date()))
             .background(Color.green)
     }
 }

@@ -14,6 +14,7 @@ class CitiesViewModel: ObservableObject {
     @Published var cities: [CityItem] = []
     @Published var errorMessage = ""
     @Published var hasError = false
+    @Published var selectedCityId: String = ""
     
     func getCities() async {
         guard let data = try? await ApiServiceGeneral().getCities() else {
@@ -25,5 +26,4 @@ class CitiesViewModel: ObservableObject {
         
         self.cities = data.data
     }
-    
 }
