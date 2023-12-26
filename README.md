@@ -31,24 +31,24 @@ Looto is an native iOS app that allows users to play lottery games. It is built 
 
 ### Home Screen
 
-<img src="repo/visual-1.png" width="200" height="400" /> 
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-1.png?raw=true" width="200" height="400" /> 
 
 ### Login Screen
 
-<img src="repo/visual-3.png" width="200" height="400" />
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-3.png?raw=true" width="200" height="400" />
 
 ### Register Screen
 
-<img src="repo/visual-4.png" width="200" height="400" />
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-4.png?raw=true" width="200" height="400" />
 
 ### Otp Screen
 
-<img src="repo/visual-6.png" width="200" height="400" />
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-6.png?raw=true" width="200" height="400" />
 
 ### Profile Screen
 
-<img src="repo/visual-5.png" width="200" height="400" />
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-6.png?raw=true" width="200" height="400" />
 
 ### Profile Update Screen
 
-<img src="repo/visual-2.png" width="200" height="400" />
+<img src="https://github.com/denizyesilirmak/looto-mobile-ios/blob/main/Repo/visual-2.png?raw=true" width="200" height="400" />
