@@ -4,16 +4,16 @@ Looto is an native iOS app that allows users to play lottery games. It is built 
 
 ## Features
 
-- [x] User can create an account
-- [x] User can login to their account
-- [x] Otp verification
-- [x] User can play lottery games
-- [x] User can view their profile
-- [x] User can deposit balance
-- [x] User can see their balance
-- [x] User can update their profile
-- [x] User can see last draw results
-- [x] User can see upcoming draw results
+- [x] User can create an account 💁‍♂️
+- [x] User can login to their account 👨‍💻
+- [x] Otp verification 📱
+- [x] User can play lottery games 🎰
+- [x] User can view their profile 👤
+- [x] User can deposit balance 💰
+- [x] User can see their balance 💵
+- [x] User can update their profile 📝
+- [x] User can see last draw results 📊
+- [x] User can see upcoming draw results 📈
 
 ## Requirements
 
